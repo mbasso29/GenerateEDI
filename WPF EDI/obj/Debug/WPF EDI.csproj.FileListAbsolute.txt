@@ -1,0 +1,34 @@
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\bin\Debug\WPF EDI.exe.config
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\bin\Debug\WPF EDI.exe
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\bin\Debug\WPF EDI.pdb
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.csproj.AssemblyReference.cache
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\MainWindow.g.cs
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\App.g.cs
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI_MarkupCompile.cache
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI_MarkupCompile.lref
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\MainWindow.baml
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.g.resources
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF_EDI.Properties.Resources.resources
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.csproj.GenerateResource.cache
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.csproj.CoreCompileInputs.cache
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.csproj.CopyComplete
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.exe
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\obj\Debug\WPF EDI.pdb
+C:\Users\MelanieB\OneDrive - Net Health Systems, Inc\EDI Project\WPF EDI\bin\Debug\SimpleWPF.dll
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\bin\Debug\WPF EDI.exe.config
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\bin\Debug\WPF EDI.exe
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\bin\Debug\WPF EDI.pdb
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\bin\Debug\SimpleWPF.dll
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.csproj.AssemblyReference.cache
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\MainWindow.g.cs
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\App.g.cs
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI_MarkupCompile.cache
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI_MarkupCompile.lref
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\MainWindow.baml
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.g.resources
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF_EDI.Properties.Resources.resources
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.csproj.GenerateResource.cache
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.csproj.CoreCompileInputs.cache
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.csproj.CopyComplete
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.exe
+C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.pdb

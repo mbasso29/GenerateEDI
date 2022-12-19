@@ -1,0 +1,116 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_EDI"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="ediInterface" x:Class="WPF_EDI.MainWindow"
+        mc:Ignorable="d"
+        Title="EDI Generator" Height="459" Width="833.782" FontFamily="Verdana" FontSize="14" Margin="0,0,0,0" ResizeMode="NoResize" SizeToContent="Height">
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="420" VerticalAlignment="Center" Width="792" Margin="0,10,0,0">
+            <TabControl Name ="tabItems" TabStripPlacement="Left" Height="405" Width="819" Canvas.Top="15" Margin="0,0,0,0">
+                <TabItem x:Name="startTab" Header="Start" Height="Auto">
+                    <Grid x:Name="startPanel" Background="#FFE5E5E5" Margin="0,0,0,0">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,33,0,0" FontFamily="Verdana" TextAlignment="Center" Width="646"><Run Text="This program was created to allow users to generate mock EDI files for testing purposes. To navigate through the wizard, select the Next, Back, or Cancel buttons."/></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Each section of this wizard will add information to your EDI file. If you would like to go back to the previous screen, click the back button." VerticalAlignment="Top" FontFamily="Verdana" TextAlignment="Center" Width="646"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="If you are finished on the current screen and would like to proceed to the next screen, select the Next button." VerticalAlignment="Top" TextAlignment="Center" Width="646" Height="36" FontFamily="Verdana" />
+                        <TextBlock HorizontalAlignment="Left" Margin="16,152,0,0" TextWrapping="Wrap" Text="To close out of this wizard without generating the EDI, select the Cancel button." VerticalAlignment="Top" FontFamily="Verdana" TextAlignment="Center" Width="646" />
+                        <TextBlock HorizontalAlignment="Left" Margin="16,174,0,0" TextWrapping="Wrap" Text="At the final stage of this wizard, you will have an option to Finish. This will generate the EDI file." VerticalAlignment="Top" Width="646" TextAlignment="Center" FontFamily="Verdana"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="16,213,0,0" TextWrapping="Wrap" Text="I hope this tool is beneficial and helps with your testing efforts!" VerticalAlignment="Top" Width="646" FontFamily="Verdana" TextAlignment="Center"/>
+                        <Button x:Name="cancelBtnStart" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontFamily="Verdana" FontSize="14" Click="cancelBtnStart_Click"/>
+                        <Button x:Name="nextBtnStart" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontFamily="Verdana" FontSize="14" Click="nextBtnStart_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="ediOptionsTab" Header="EDI Options" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Please select what type of EDI you would like to generate!" VerticalAlignment="Top" Width="664" TextAlignment="Center"/>
+                        <ComboBox Name="ediOptions" HorizontalAlignment="Left" Margin="285,35,0,0" VerticalAlignment="Top" Width="96">
+                            <ComboBoxItem Name="item837">837</ComboBoxItem>
+                            <ComboBoxItem Name="item835">835</ComboBoxItem>
+                            <ComboBoxItem Name="item834">834</ComboBoxItem>
+                            <ComboBoxItem Name="item820">820</ComboBoxItem>
+                            <ComboBoxItem Name="item270">270</ComboBoxItem>
+                            <ComboBoxItem Name="item271">271</ComboBoxItem>
+                            <ComboBoxItem Name="item276">276</ComboBoxItem>
+                            <ComboBoxItem Name="item277">277</ComboBoxItem>
+                            <ComboBoxItem Name="item278">278</ComboBoxItem>
+                            <ComboBoxItem Name="item997">997</ComboBoxItem>
+                        </ComboBox>
+                        <Button x:Name="cancelBtnEDITab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnEDITab_Click"/>
+                        <Button x:Name="nextBtnEDITab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.282,0.417" FontSize="14" Click="nextBtnEDITab_Click"/>
+                        <Button x:Name="backBtnEDITab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnEDITab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="claimInfoTab" Header="Claim Info" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnClmInfoTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnClmInfoTab_Click"/>
+                        <Button x:Name="nextBtnClaimInfoTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnClaimInfoTab_Click"/>
+                        <Button x:Name="backBtnClaimInfoTab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnClaimInfoTab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="serviceLineInfo" Header="Service Lines" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnSrvLineTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnSrvLineTab_Click"/>
+                        <Button x:Name="nextBtnSrvLineTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnSrvLineTab_Click"/>
+                        <Button x:Name="backBtnSrvLineTab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnSrvLineTab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="addtlInfoTab" Header="Addt'l Info" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnAddtlInfoTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="nextBtnAddtlInfoTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="backBtnAddtlInfoTab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnAddtlInfoTab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="verifyEDITab" Header="Verify EDI" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnVerifyEDITab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnVerifyEDITab_Click"/>
+                        <Button x:Name="nextBtnVerifyEDITab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnVerifyEDITab_Click"/>
+                        <Button x:Name="backBtnVerifyEDITab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnVerifyEDITab_Click"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="256,10,0,0" TextWrapping="Wrap" Text="Please verify your EDI file." VerticalAlignment="Top"/>
+                        <ScrollViewer HorizontalAlignment="Left" Height="330" Margin="10,32,0,0" VerticalAlignment="Top" Width="684">
+                            <TextBox Name="ediResultsTextBox">
+                                
+                            </TextBox>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="generateEDITab" Header="Generate EDI" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnGenerateEDITab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnGenerateEDITab_Click"/>
+                        <Button x:Name="nextBtnGenerateEDITab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnGenerateEDITab_Click"/>
+                        <Button x:Name="backBtnGenerateEDITab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnGenerateEDITab_Click"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="212,61,0,0" TextWrapping="Wrap" Text="Where would you like to save this file?" VerticalAlignment="Top"/>
+                        <TextBox Name="filenameTextBox" HorizontalAlignment="Left" Height="20" Margin="150,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="14"/>
+                        <Button x:Name="browseBtn" Content="Browse" Height="20" HorizontalAlignment="Left" Margin="485,83,0,0" VerticalAlignment="Top" Width="66" FontSize="14" RenderTransformOrigin="-0.004,-0.322" Click="browseBtn_Click"/>
+                        <TextBlock HorizontalAlignment="Center" Margin="0,108,0,0" TextWrapping="Wrap" Text="File extension will be added after saving file name based on the file type selected on the EDI Options screen." VerticalAlignment="Top" FontSize="10" TextAlignment="Center"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="finishTab" Header="Finished!" Height="Auto">
+                    <Grid Background="#FFE5E5E5">
+                        <TextBlock HorizontalAlignment="Left" Margin="21,108,0,0" TextWrapping="Wrap" Text="Your EDI file has been generated! Please select Done and navigate to the folder you saved your file in!" VerticalAlignment="Top" Width="664" TextAlignment="Center"/>
+                        <Button x:Name="doneBtn" Content="Done" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="10" Click="doneBtn_Click"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Canvas>
+        <DockPanel HorizontalAlignment="Left" Height="Auto" LastChildFill="False" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto">
+            <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontFamily="Verdana" FontSize="14" Width="Auto">
+                <MenuItem x:Name="fileMenu" Header="File" HorizontalAlignment="Left" FontFamily="Verdana" FontSize="14" Width="Auto" Height="Auto" StaysOpenOnClick="True">
+                    <MenuItem.Style>
+                        <Style TargetType="MenuItem">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="IsSubmenuOpen" Value="True" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </MenuItem.Style>
+                    <MenuItem x:Name="preferencesMenuItem"  Header="Preferences" Click="preferencesMenuItem_Click" />
+                    <MenuItem x:Name="exitMenuItem" Header="Exit" Click="exitMenuItem_Click" />
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+    </Grid>
+</Window>
