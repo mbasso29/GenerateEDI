@@ -10,7 +10,7 @@
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="420" VerticalAlignment="Center" Width="792" Margin="0,10,0,0">
             <TabControl Name ="tabItems" TabStripPlacement="Left" Height="405" Width="819" Canvas.Top="15" Margin="0,0,0,0">
-                <TabItem x:Name="startTab" Header="Start" Height="Auto" ToolTip="Instructions">
+                <TabItem x:Name="startTab" Header="Start" Height="Auto" ToolTip="Instructions" Margin="0,0,-2,-4">
                     <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
                         <TextBlock HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="This program was created to allow users to generate mock EDI files for testing purposes. To navigate through the wizard, select the Next, Back, or Cancel buttons." VerticalAlignment="Top" Width="646" TextAlignment="Center" />
                         <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Each section of this wizard will add information to your EDI file. If you would like to go back to the previous screen, click the back button." VerticalAlignment="Top" Width="646" TextAlignment="Center" />
@@ -22,7 +22,7 @@
                         <Button x:Name="nextBtnStart" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontFamily="Verdana" FontSize="14" Click="nextBtnStart_Click" ToolTip="Click Next to move onto the next page"/>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="ediOptionsTab" Header="EDI Options" Height="Auto" ToolTip="EDI selections">
+                <TabItem x:Name="ediOptionsTab" Header="EDI Options" Height="Auto" ToolTip="EDI selections" Margin="0,1,-2,-5">
                     <Grid Background="#FFE5E5E5">
                         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Please select what type of EDI you would like to generate!" VerticalAlignment="Top" Width="664" TextAlignment="Center"/>
                         <ComboBox Name="ediOptions" HorizontalAlignment="Left" Margin="285,35,0,0" VerticalAlignment="Top" Width="96" ToolTip="Select the EDI type you'd like to generate">
@@ -42,7 +42,7 @@
                         <Button x:Name="backBtnEDITab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnEDITab_Click" ToolTip="Click to move to previous screen"/>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="facilityInfoTab" Header="Facility Info" Height="Auto" Margin="0,0,-2,-4">
+                <TabItem x:Name="facilityInfoTab" Header="Facility Info" Height="Auto" Margin="0,3,-2,-7">
                     <Grid Background="#FFE5E5E5">
                         <Button x:Name="cancelBtnAddtlInfoTab1" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnAddtlInfoTab_Click"/>
                         <Button x:Name="nextBtnAddtlInfoTab1" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnAddtlInfoTab_Click"/>
