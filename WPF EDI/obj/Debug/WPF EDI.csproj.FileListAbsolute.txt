@@ -35,7 +35,6 @@ C:\GitPersonal\Generator\EDIGenerator\WPF EDI\obj\Debug\WPF EDI.pdb
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\bin\Debug\WPF EDI.exe.config
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\bin\Debug\WPF EDI.exe
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\bin\Debug\WPF EDI.pdb
-C:\GitPersonal\Generator\GenerateEDI\WPF EDI\bin\Debug\SimpleWPF.dll
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.csproj.AssemblyReference.cache
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\MainWindow.g.cs
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\App.g.cs
@@ -46,6 +45,5 @@ C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.g.resources
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF_EDI.Properties.Resources.resources
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.csproj.GenerateResource.cache
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.csproj.CoreCompileInputs.cache
-C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.csproj.CopyComplete
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.exe
 C:\GitPersonal\Generator\GenerateEDI\WPF EDI\obj\Debug\WPF EDI.pdb
