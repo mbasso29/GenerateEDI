@@ -26,7 +26,7 @@ namespace WPF_EDI
             InitializeComponent();
         }
 
-        #region Click classes
+        #region Button classes
         private void ShowExitConfirmationMessageBox_Click(object sender, RoutedEventArgs e)
         {
             //Configure Message Box information
@@ -203,10 +203,6 @@ namespace WPF_EDI
             {
                 dlg.DefaultExt = "835";
             }
-            else if (ediOptions.SelectedItem == item834)
-            {
-                dlg.DefaultExt = "834";
-            }
             else if (ediOptions.SelectedItem == item820)
             {
                 dlg.DefaultExt = "820";
@@ -226,14 +222,6 @@ namespace WPF_EDI
             else if (ediOptions.SelectedItem == item277)
             {
                 dlg.DefaultExt = "277";
-            }
-            else if (ediOptions.SelectedItem == item278)
-            {
-                dlg.DefaultExt = "278";
-            }
-            else if (ediOptions.SelectedItem == item997)
-            {
-                dlg.DefaultExt = "997";
             }
             else
             {
