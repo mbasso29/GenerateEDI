@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 
 namespace WPF_EDI
 {
@@ -26,6 +26,7 @@ namespace WPF_EDI
             InitializeComponent();
         }
 
+        #region Click classes
         private void ShowExitConfirmationMessageBox_Click(object sender, RoutedEventArgs e)
         {
             //Configure Message Box information
@@ -55,6 +56,9 @@ namespace WPF_EDI
             tabItems.SelectedIndex--;
         }
 
+        #endregion
+
+        #region File Menu Classes
         private void preferencesMenuItem_Click(object sender, RoutedEventArgs e)
         {
 
@@ -65,6 +69,9 @@ namespace WPF_EDI
             ShowExitConfirmationMessageBox_Click(sender, e);
         }
 
+        #endregion
+
+        #region Cancel Buttons
         private void cancelBtnStart_Click(object sender, RoutedEventArgs e)
         {
             ShowExitConfirmationMessageBox_Click(sender, e);
@@ -100,10 +107,17 @@ namespace WPF_EDI
             ShowExitConfirmationMessageBox_Click(sender, e);
         }
 
+        #endregion
+
+        #region Done Button
         private void doneBtn_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
         }
+
+        #endregion
+
+        #region Next Buttons
 
         private void nextBtnStart_Click(object sender, RoutedEventArgs e)
         {
@@ -140,6 +154,9 @@ namespace WPF_EDI
             ShowNextTab_Click(sender, e);
         }
 
+        #endregion
+
+        #region Back Buttons
         private void backBtnEDITab_Click(object sender, RoutedEventArgs e)
         {
             ShowPreviousTab_Click(sender, e);
@@ -169,6 +186,10 @@ namespace WPF_EDI
         {
             ShowPreviousTab_Click(sender, e);
         }
+
+        #endregion
+
+        #region Browse
 
         public void browseBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -226,5 +247,47 @@ namespace WPF_EDI
                 filenameTextBox.Text = dlg.FileName;
             }
         }
+
+        #endregion
+
+        #region Restrict to numeric code
+
+        private void clmAmtTxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void pmtAmtTxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void trsfrAmtTxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void pmtAmtTxtBox1_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void adjAmtTxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void trsfrAmtTxtBox1_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        #endregion
     }
 }

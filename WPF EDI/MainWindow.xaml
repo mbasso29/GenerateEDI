@@ -11,11 +11,11 @@
         <Canvas HorizontalAlignment="Left" Height="420" VerticalAlignment="Center" Width="792" Margin="0,10,0,0">
             <TabControl Name ="tabItems" TabStripPlacement="Left" Height="405" Width="819" Canvas.Top="15" Margin="0,0,0,0">
                 <TabItem x:Name="startTab" Header="Start" Height="Auto" ToolTip="Instructions">
-                    <Grid x:Name="startPanel" Background="#FFE5E5E5" Margin="0,0,0,0">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,33,0,0" FontFamily="Verdana" TextAlignment="Center" Width="646"><Run Text="This program was created to allow users to generate mock EDI files for testing purposes. To navigate through the wizard, select the Next, Back, or Cancel buttons."/></TextBlock>
-                        <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Each section of this wizard will add information to your EDI file. If you would like to go back to the previous screen, click the back button." VerticalAlignment="Top" FontFamily="Verdana" TextAlignment="Center" Width="646"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="If you are finished on the current screen and would like to proceed to the next screen, select the Next button." VerticalAlignment="Top" TextAlignment="Center" Width="646" Height="36" FontFamily="Verdana" />
-                        <TextBlock HorizontalAlignment="Left" Margin="16,152,0,0" TextWrapping="Wrap" Text="To close out of this wizard without generating the EDI, select the Cancel button." VerticalAlignment="Top" FontFamily="Verdana" TextAlignment="Center" Width="646" />
+                    <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
+                        <TextBlock HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="This program was created to allow users to generate mock EDI files for testing purposes. To navigate through the wizard, select the Next, Back, or Cancel buttons." VerticalAlignment="Top" Width="646" TextAlignment="Center" />
+                        <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Each section of this wizard will add information to your EDI file. If you would like to go back to the previous screen, click the back button." VerticalAlignment="Top" Width="646" TextAlignment="Center" />
+                        <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="If you are finished on the current screen and would like to proceed to the next screen, select the Next button." VerticalAlignment="Top" TextAlignment="Center" Width="646" Height="36" FontFamily="Verdana"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="16,152,0,0" TextWrapping="Wrap" Text="To close out of this wizard without generating the EDI, select the Cancel button." VerticalAlignment="Top" FontFamily="Verdana" TextAlignment="Center" Width="646"/>
                         <TextBlock HorizontalAlignment="Left" Margin="16,174,0,0" TextWrapping="Wrap" Text="At the final stage of this wizard, you will have an option to Finish. This will generate the EDI file." VerticalAlignment="Top" Width="646" TextAlignment="Center" FontFamily="Verdana"/>
                         <TextBlock HorizontalAlignment="Left" Margin="16,213,0,0" TextWrapping="Wrap" Text="I hope this tool is beneficial and helps with your testing efforts!" VerticalAlignment="Top" Width="646" FontFamily="Verdana" TextAlignment="Center"/>
                         <Button x:Name="cancelBtnStart" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontFamily="Verdana" FontSize="14" Click="cancelBtnStart_Click" ToolTip="Click Cancel to close out of the application"/>
@@ -42,7 +42,28 @@
                         <Button x:Name="backBtnEDITab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnEDITab_Click" ToolTip="Click to move to previous screen"/>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="claimInfoTab" Header="Claim Info" Height="Auto">
+                <TabItem x:Name="facilityInfoTab" Header="Facility Info" Height="Auto" Margin="0,0,-2,-4">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnAddtlInfoTab1" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="nextBtnAddtlInfoTab1" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="backBtnAddtlInfoTab1" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnAddtlInfoTab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="providerInfoTab" Header="Provider Info" Height="Auto" Margin="0,5,-2,-9">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnAddtlInfoTab2" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="nextBtnAddtlInfoTab2" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="backBtnAddtlInfoTab2" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnAddtlInfoTab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="patientInfoTab" Header="Patient Info" Height="Auto" Margin="0,8,-2,-12">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="cancelBtnAddtlInfoTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="nextBtnAddtlInfoTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnAddtlInfoTab_Click"/>
+                        <Button x:Name="backBtnAddtlInfoTab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnAddtlInfoTab_Click"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="claimInfoTab" Header="Claim Info" Height="Auto" Margin="0,12,-2,-16">
                     <Grid Background="#FFE5E5E5">
                         <Button x:Name="cancelBtnClmInfoTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnClmInfoTab_Click" ToolTip="Close the application"/>
                         <Button x:Name="nextBtnClaimInfoTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnClaimInfoTab_Click" ToolTip="Click to move to the next page"/>
@@ -53,28 +74,32 @@
                         <TextBlock HorizontalAlignment="Left" Margin="83,145,0,0" TextWrapping="Wrap" Text="Claim Number" VerticalAlignment="Top" RenderTransformOrigin="0.515,0.138"/>
                         <TextBox x:Name="ClmNoTxtBox" HorizontalAlignment="Left" Height="23" Margin="73,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" SpellCheck.IsEnabled="True"/>
                         <TextBlock HorizontalAlignment="Left" Margin="99,195,0,0" TextWrapping="Wrap" Text="Payer ID" VerticalAlignment="Top"/>
-                        <TextBox x:Name="payerIDTxtBox" HorizontalAlignment="Left" Height="23" Margin="72,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <ComboBox x:Name="payerIDDropDown" HorizontalAlignment="Left" Margin="72,217,0,0" VerticalAlignment="Top" Width="120"/>
                         <TextBlock HorizontalAlignment="Left" Margin="83,245,0,0" TextWrapping="Wrap" Text="Claim Amount" VerticalAlignment="Top"/>
-                        <TextBox x:Name="clmAmtTxtBox" HorizontalAlignment="Left" Height="23" Margin="72,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="clmAmtTxtBox" HorizontalAlignment="Left" Height="23" Margin="72,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="clmAmtTxtBox_PreviewTextInput"/>
                         <TextBlock HorizontalAlignment="Left" Margin="72,295,0,0" TextWrapping="Wrap" Text="Payment Amount" VerticalAlignment="Top"/>
-                        <TextBox x:Name="pmtAmtTxtBox" HorizontalAlignment="Left" Height="23" Margin="72,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="pmtAmtTxtBox" HorizontalAlignment="Left" Height="23" Margin="72,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="pmtAmtTxtBox_PreviewTextInput"/>
                         <CheckBox x:Name="trnfrCheckBox" Content="Transfer?" HorizontalAlignment="Left" Margin="305,148,0,0" VerticalAlignment="Top" Width="91"/>
                         <TextBlock HorizontalAlignment="Left" Margin="305,170,0,0" TextWrapping="Wrap" Text="Crossover ID" VerticalAlignment="Top" RenderTransformOrigin="0.705,0.402"/>
                         <TextBox x:Name="crossoverIDTxtBox" HorizontalAlignment="Left" Height="23" Margin="293,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                         <TextBlock HorizontalAlignment="Left" Margin="296,223,0,0" TextWrapping="Wrap" Text="Transfer Amount" VerticalAlignment="Top"/>
-                        <TextBox x:Name="trsfrAmtTxtBox" HorizontalAlignment="Left" Height="23" Margin="293,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="533,136,0,0" TextWrapping="Wrap" Text="Claim Date" VerticalAlignment="Top"/>
-                        <TextBox x:Name="clmDateTxtBox" HorizontalAlignment="Left" Height="23" Margin="514,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="533,186,0,0" TextWrapping="Wrap" Text="Post Date" VerticalAlignment="Top" Width="77" TextAlignment="Center"/>
-                        <TextBox x:Name="postDtTxtBox" HorizontalAlignment="Left" Height="23" Margin="514,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="525,239,0,0" TextWrapping="Wrap" Text="Payment Date" VerticalAlignment="Top"/>
-                        <TextBox x:Name="pmtDtTxtBox" HorizontalAlignment="Left" Height="23" Margin="514,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.21,-1.34"/>
+                        <TextBox x:Name="trsfrAmtTxtBox" HorizontalAlignment="Left" Height="23" Margin="293,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="trsfrAmtTxtBox_PreviewTextInput"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="532,92,0,0" TextWrapping="Wrap" Text="Claim Date" VerticalAlignment="Top"/>
+                        <DatePicker x:Name="clmDatePicker" HorizontalAlignment="Left" Margin="513,114,0,0" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="532,142,0,0" TextWrapping="Wrap" Text="Post Date" VerticalAlignment="Top" Width="77" TextAlignment="Center"/>
+                        <DatePicker x:Name="postDatePicker" HorizontalAlignment="Left" Margin="513,164,0,0" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="524,195,0,0" TextWrapping="Wrap" Text="Payment Date" VerticalAlignment="Top"/>
+                        <DatePicker x:Name="pmtDatePicker" HorizontalAlignment="Left" Margin="513,217,0,0" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Text="Enter the information below that is relevant to the patient claim." VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="64,95,0,0" TextWrapping="Wrap" Text="Reference Number" VerticalAlignment="Top" Width="138" TextAlignment="Center"/>
                         <TextBox x:Name="refNoTxtBox" HorizontalAlignment="Left" Height="23" Margin="72,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="505,245,0,0" TextWrapping="Wrap" Text="Services From Date" VerticalAlignment="Top"/>
+                        <DatePicker x:Name="srvFromDatePicker" HorizontalAlignment="Left" Margin="513,267,0,0" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="505,295,0,0" TextWrapping="Wrap" Text="Services Thru Date" VerticalAlignment="Top"/>
+                        <DatePicker x:Name="srvThruDatePicker" HorizontalAlignment="Left" Margin="513,317,0,0" VerticalAlignment="Top"/>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="serviceLineInfo" Header="Service Lines" Height="Auto">
+                <TabItem x:Name="serviceLineInfo" Header="Service Lines" Height="Auto" Margin="0,16,-2,-20">
                     <Grid Background="#FFE5E5E5">
                         <Button x:Name="cancelBtnSrvLineTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnSrvLineTab_Click"/>
                         <Button x:Name="nextBtnSrvLineTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnSrvLineTab_Click"/>
@@ -85,18 +110,18 @@
                         </ScrollViewer>
                         <GroupBox Header="Service Info" HorizontalAlignment="Left" Height="181" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
                         <TextBlock HorizontalAlignment="Left" Margin="45,32,0,0" TextWrapping="Wrap" Text="Date of Service" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
-                        <TextBox x:Name="dateOfServiceTxtBox" HorizontalAlignment="Left" Height="23" Margin="45,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <DatePicker HorizontalAlignment="Left" Margin="45,54,0,0" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="45,82,0,0" TextWrapping="Wrap" Text="Service Code" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
                         <TextBox x:Name="srvCodeTxtBox" HorizontalAlignment="Left" Height="23" Margin="45,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-2.608,0.493"/>
                         <GroupBox Header="Amounts" HorizontalAlignment="Right" Height="181" Margin="0,10,10,0" VerticalAlignment="Top" Width="200"/>
                         <TextBlock HorizontalAlignment="Left" Margin="45,132,0,0" TextWrapping="Wrap" Text="Revenue Code" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
                         <TextBox x:Name="revCodeTxtBox" HorizontalAlignment="Left" Height="23" Margin="45,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                         <TextBlock HorizontalAlignment="Right" Margin="0,35,30,0" TextWrapping="Wrap" Text="Payment Amount" VerticalAlignment="Top" Width="150" TextAlignment="Center"/>
-                        <TextBox x:Name="pmtAmtTxtBox1" HorizontalAlignment="Right" Height="23" Margin="0,57,45,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="pmtAmtTxtBox1" HorizontalAlignment="Right" Height="23" Margin="0,57,45,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="pmtAmtTxtBox1_PreviewTextInput"/>
                         <TextBlock HorizontalAlignment="Right" Margin="0,85,30,0" TextWrapping="Wrap" Text="Adjustment Amount" VerticalAlignment="Top" TextAlignment="Center" Width="150"/>
-                        <TextBox x:Name="adjAmtTxtBox" HorizontalAlignment="Right" Height="23" Margin="0,107,45,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="adjAmtTxtBox" HorizontalAlignment="Right" Height="23" Margin="0,107,45,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="adjAmtTxtBox_PreviewTextInput"/>
                         <TextBlock HorizontalAlignment="Right" Margin="0,132,30,0" TextWrapping="Wrap" Text="Transfer Amount" VerticalAlignment="Top" Width="150" TextAlignment="Center"/>
-                        <TextBox x:Name="trsfrAmtTxtBox1" HorizontalAlignment="Right" Height="23" Margin="0,154,45,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="trsfrAmtTxtBox1" HorizontalAlignment="Right" Height="23" Margin="0,154,45,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="trsfrAmtTxtBox1_PreviewTextInput"/>
                         <GroupBox Header="Reason Codes" HorizontalAlignment="Center" Height="181" Margin="0,10,0,0" VerticalAlignment="Top" Width="200"/>
                         <TextBlock HorizontalAlignment="Center" Margin="0,32,0,0" TextWrapping="Wrap" Text="Payment Code" VerticalAlignment="Top" Width="144" TextAlignment="Center"/>
                         <TextBox x:Name="pmtCodeTxtBox" HorizontalAlignment="Center" Height="23" Margin="0,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -106,14 +131,7 @@
                         <TextBox x:Name="trsfrCodeTxtBox" HorizontalAlignment="Center" Height="23" Margin="0,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="addtlInfoTab" Header="Addt'l Info" Height="Auto">
-                    <Grid Background="#FFE5E5E5">
-                        <Button x:Name="cancelBtnAddtlInfoTab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnAddtlInfoTab_Click"/>
-                        <Button x:Name="nextBtnAddtlInfoTab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnAddtlInfoTab_Click"/>
-                        <Button x:Name="backBtnAddtlInfoTab" Content="Back" HorizontalAlignment="Left" Margin="539,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="backBtnAddtlInfoTab_Click"/>
-                    </Grid>
-                </TabItem>
-                <TabItem x:Name="verifyEDITab" Header="Verify EDI" Height="Auto">
+                <TabItem x:Name="verifyEDITab" Header="Verify EDI" Height="Auto" Margin="0,20,-2,-24">
                     <Grid Background="#FFE5E5E5">
                         <Button x:Name="cancelBtnVerifyEDITab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnVerifyEDITab_Click"/>
                         <Button x:Name="nextBtnVerifyEDITab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnVerifyEDITab_Click"/>
@@ -121,12 +139,11 @@
                         <TextBlock HorizontalAlignment="Left" Margin="256,10,0,0" TextWrapping="Wrap" Text="Please verify your EDI file." VerticalAlignment="Top"/>
                         <ScrollViewer HorizontalAlignment="Left" Height="330" Margin="10,32,0,0" VerticalAlignment="Top" Width="684">
                             <TextBox Name="ediResultsTextBox">
-
                             </TextBox>
                         </ScrollViewer>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="generateEDITab" Header="Generate EDI" Height="Auto">
+                <TabItem x:Name="generateEDITab" Header="Generate EDI" Height="Auto" Margin="0,24,-2,-28">
                     <Grid Background="#FFE5E5E5">
                         <Button x:Name="cancelBtnGenerateEDITab" Content="Cancel" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="cancelBtnGenerateEDITab_Click"/>
                         <Button x:Name="nextBtnGenerateEDITab" Content="Next" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="nextBtnGenerateEDITab_Click"/>
@@ -137,7 +154,7 @@
                         <TextBlock HorizontalAlignment="Center" Margin="0,108,0,0" TextWrapping="Wrap" Text="File extension will be added after saving file name based on the file type selected on the EDI Options screen." VerticalAlignment="Top" FontSize="10" TextAlignment="Center"/>
                     </Grid>
                 </TabItem>
-                <TabItem x:Name="finishTab" Header="Finished!" Height="Auto">
+                <TabItem x:Name="finishTab" Header="Finished!" Height="Auto" Margin="0,28,-2,-32">
                     <Grid Background="#FFE5E5E5">
                         <TextBlock HorizontalAlignment="Left" Margin="21,108,0,0" TextWrapping="Wrap" Text="Your EDI file has been generated! Please select Done and navigate to the folder you saved your file in!" VerticalAlignment="Top" Width="664" TextAlignment="Center"/>
                         <Button x:Name="doneBtn" Content="Done" HorizontalAlignment="Left" Margin="619,367,0,0" VerticalAlignment="Top" Width="75" FontSize="10" Click="doneBtn_Click"/>
@@ -157,8 +174,8 @@
                             </Style.Triggers>
                         </Style>
                     </MenuItem.Style>
-                    <MenuItem x:Name="preferencesMenuItem"  Header="Preferences" Click="preferencesMenuItem_Click" ToolTip="Ability to change EDI types available and default file extension" />
-                    <MenuItem x:Name="exitMenuItem" Header="Exit" Click="exitMenuItem_Click" ToolTip="Exit the application" />
+                    <MenuItem x:Name="preferencesMenuItem" Header="Preferences" Click="preferencesMenuItem_Click" ToolTip="Ability to change EDI types available and default file extension"/>
+                    <MenuItem x:Name="exitMenuItem" Header="Exit" Click="exitMenuItem_Click" ToolTip="Exit the application"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
