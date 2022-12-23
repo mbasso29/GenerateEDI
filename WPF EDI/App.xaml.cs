@@ -13,6 +13,5 @@ namespace WPF_EDI
     /// </summary>
     public partial class App : Application
     {
-
     }
 }
