@@ -27,30 +27,6 @@ namespace WPF_EDI
             InitializeComponent();
         }
 
-        public static class BadChars
-        {
-            public static readonly char[] Interchange_String = new char[] { '~', '`', ':', '!', '@', '#', '$', '%', '^', '*', '_', '=', '?', '/', '>', '<', '.', '\'', '{', '}', '[', ']', '|', '\\', '\"' };
-            public static readonly char[] Interchange_Account_String = new char[] { ' ', '~', '`', ':', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', ';', '.', '\'', '{', '}', '[', ']', '|', '\\', '\"' };
-
-            public static readonly char[] Phone = new char[] { ' ', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', '.' };
-            public static readonly char[] Zip = new char[] { ' ', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', '.' };
-            public static readonly char[] AccountNo = new char[] { ' ', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', '.', ';', ':' };
-            public static readonly char[] Identifier = new char[] { ' ', '~', '`', ':', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', ';', '.', '\'', '{', '}', '[', ']', '|', '\\', '\"' };
-            public static readonly char[] Diagnosis = new char[] { ' ', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', '.' };
-            public static readonly char[] Str = new char[] { '*', '~', ':', '\'', '.', '\"' };
-            public static readonly char[] Name = new char[] { '~', '`', ':', '!', '@', '#', '$', '%', '^', '*', '_', '=', '?', '/', '>', '<', '.', '\'', '{', '}', '[', ']', '|', '\\', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '\"' };
-            public static readonly char[] Email = new char[] { '*', '~', ':', '\'', '\"' };
-            public static readonly char[] City = new char[] { '*', '~', ':', '\'', '.', '\"' };
-        }
-
-        public static class physIdentQualifier
-        {
-            public const string employeeNo = "24";
-            public const string socialSN = "34";
-            public const string HCFA = "XX";
-        }
-
-
         #region Button classes
         private void ShowExitConfirmationMessageBox_Click(object sender, RoutedEventArgs e)
         {
@@ -570,9 +546,19 @@ namespace WPF_EDI
                 lProvider2010AB_N4Segment.N403_PostalCode = FormatZip(this.payToZipBPTab.ToString());
             }
             #endregion
+
+            #endregion
         }
 
-        #endregion
+        private void CreateSubscriberLevel()
+        {
+            _nHLSegment++;
+
+            _subscriber2000BHLoop = _provider2000AHLoop.AddHLoop(_nHLSegment.ToString(), "22", false);
+            var lSegmentSBR = _subscriber2000BHLoop.AddSegment(new TypedSegmentSBR());
+            
+
+        }
 
         #endregion
 
