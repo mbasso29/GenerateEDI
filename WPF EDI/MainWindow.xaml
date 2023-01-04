@@ -9,9 +9,13 @@
         Title="EDI Generation Wizard" Height="600" Width="1010" FontFamily="Verdana" FontSize="14" Margin="0,0,0,0" ResizeMode="NoResize" SizeToContent="Height">
     <!--Set up grid to contain information needed from user-->
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="869*"/>
+        </Grid.ColumnDefinitions>
         <!--#region Navigation Panel-->
         <!--Canvas will hold tab control information-->
-        <Canvas HorizontalAlignment="Left" Height="555" VerticalAlignment="Center" Width="1005" Margin="0,15,0,0">
+        <Canvas HorizontalAlignment="Left" Height="555" VerticalAlignment="Top" Width="1005" Margin="0,22,0,0" Grid.ColumnSpan="2">
             <!--Tab control will hold the navigation for the EDI Generation Wizard-->
             <TabControl Name ="tabItems" TabStripPlacement="Left" Height="555" Width="995" Margin="0,0,10,0">
                 <!--#region Instructions screen-->
@@ -368,16 +372,10 @@
         <!--#endregion-->
         <DockPanel HorizontalAlignment="Left" Height="Auto" LastChildFill="False" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto">
             <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontFamily="Verdana" FontSize="10" Width="Auto">
-                <MenuItem x:Name="optionsMenu" Header="Options" HorizontalAlignment="Left" FontFamily="Verdana" FontSize="11" Width="Auto" Height="Auto" StaysOpenOnClick="True">
-                    <MenuItem.Style>
-                        <Style TargetType="MenuItem">
-                            <Style.Triggers>
-                            </Style.Triggers>
-                        </Style>
-                    </MenuItem.Style>
+                <MenuItem x:Name="optionsMenu" Header="Options" HorizontalAlignment="Left" FontFamily="Verdana" FontSize="11" Width="Auto" Height="Auto" StaysOpenOnClick="True" MouseEnter="optionsMenu_MouseEnter" MouseLeave="optionsMenu_MouseLeave">
                     <MenuItem x:Name="preferencesMenuItem"  Header="Preferences" />
                     <MenuItem x:Name="saveSelectedMenuItem" Header="Save Selected" />
-                    <MenuItem x:Name="exitMenuItem" Header="Exit" />
+                    <MenuItem x:Name="exitMenuItem" Header="Exit" Click="exitMenuItem_Click" />
                 </MenuItem>
             </Menu>
         </DockPanel>
