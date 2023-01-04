@@ -372,9 +372,6 @@
                     <MenuItem.Style>
                         <Style TargetType="MenuItem">
                             <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="IsSubmenuOpen" Value="True" />
-                                </Trigger>
                             </Style.Triggers>
                         </Style>
                     </MenuItem.Style>
