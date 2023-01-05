@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using OopFactory.X12.Parsing.Model;
 using OopFactory.X12.Parsing.Model.Typed;
 
@@ -64,6 +56,16 @@ namespace WPF_EDI
         #endregion
 
         #region File Menu Classes
+
+        private void optionsMenu_MouseEnter(object sender, MouseEventArgs e)
+        {
+            (sender as MenuItem).IsSubmenuOpen = true;
+        }
+
+        private void optionsMenu_MouseLeave(object sender, MouseEventArgs e)
+        {
+            (sender as MenuItem).IsSubmenuOpen = false;
+        }
 
         private void preferencesMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -733,6 +735,7 @@ namespace WPF_EDI
         #endregion
 
         #endregion
+        
     }
 
 }
