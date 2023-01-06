@@ -17,7 +17,7 @@
         <!--Canvas will hold tab control information-->
         <Canvas HorizontalAlignment="Left" Height="555" VerticalAlignment="Top" Width="1005" Margin="0,22,0,0" Grid.ColumnSpan="2">
             <!--Tab control will hold the navigation for the EDI Generation Wizard-->
-            <TabControl Name ="tabItems" TabStripPlacement="Left" Height="555" Width="995" Margin="0,0,10,0">
+            <TabControl Name ="tabItems" TabStripPlacement="Left" Height="548" Width="995" Margin="0,0,10,0">
                 <!--#region Instructions screen-->
                 <!--Instructions tab. Show instructions in text blocks for easy formatting and editing. Navigate using the next button. Cancel should allow the user to exit the application-->
                 <TabItem x:Name="startTab" Header="Start" Height="Auto">
@@ -372,9 +372,8 @@
         <!--#endregion-->
         <DockPanel HorizontalAlignment="Left" Height="Auto" LastChildFill="False" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto">
             <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontFamily="Verdana" FontSize="10" Width="Auto">
-                <MenuItem x:Name="optionsMenu" Header="Options" HorizontalAlignment="Left" FontFamily="Verdana" FontSize="11" Width="Auto" Height="Auto" StaysOpenOnClick="True" MouseEnter="optionsMenu_MouseEnter" MouseLeave="optionsMenu_MouseLeave">
+                <MenuItem x:Name="optionsMenu" Header="File" HorizontalAlignment="Left" FontFamily="Verdana" FontSize="11" Width="Auto" Height="Auto" StaysOpenOnClick="True" MouseEnter="optionsMenu_MouseEnter" MouseLeave="optionsMenu_MouseLeave">
                     <MenuItem x:Name="preferencesMenuItem"  Header="Preferences" />
-                    <MenuItem x:Name="saveSelectedMenuItem" Header="Save Selected" />
                     <MenuItem x:Name="exitMenuItem" Header="Exit" Click="exitMenuItem_Click" />
                 </MenuItem>
             </Menu>
