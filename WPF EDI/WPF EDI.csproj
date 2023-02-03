@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WPF_EDI.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="OopFactory.X12, Version=3.0.8.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\OopFactory.X12.3.0.8.1\lib\net40\OopFactory.X12.dll</HintPath>
@@ -59,7 +62,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Services\EDI837Generator.cs" />
+    <Page Include="Forms\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -67,14 +71,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BadChars.cs" />
-    <Compile Include="physIdentQualifier.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Models\BadChars.cs" />
+    <Compile Include="Models\PhysIdentQualifier.cs" />
+    <Compile Include="Forms\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Forms\Preferences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Preferences.xaml.cs">
+      <DependentUpon>Preferences.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
