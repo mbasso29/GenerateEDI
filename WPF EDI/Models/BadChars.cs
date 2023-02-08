@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WPF_EDI
+﻿namespace WPF_EDI.Models
 {
-    class BadChars
+    public static class BadChars
     {
         public static readonly char[] Interchange_String = new char[] { '~', '`', ':', '!', '@', '#', '$', '%', '^', '*', '_', '=', '?', '/', '>', '<', '.', '\'', '{', '}', '[', ']', '|', '\\', '\"' };
         public static readonly char[] Interchange_Account_String = new char[] { ' ', '~', '`', ':', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '/', '>', '<', ',', ';', '.', '\'', '{', '}', '[', ']', '|', '\\', '\"' };
